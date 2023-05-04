@@ -1,0 +1,12 @@
+.v-main {
+    position: relative;
+    p {
+        font-size: 25px;
+        font-weight: bold;
+        color: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
