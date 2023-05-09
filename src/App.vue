@@ -1,32 +1,38 @@
 <template>
+  <v-card
+    color="grey-lighten-4"
+    flat
+    height="56px"
+    rounded="0"
+    class="header"
+  >
+    <v-toolbar density="compact">
+      <a href="http://localhost:8080/" class="logo">
+        <!-- <img :src="require('@/assets/images/top_logo_pc.png')"> -->
+        <img :src="require('./assets/images/top_logo_pc.png')">
+      </a>
+      <v-spacer></v-spacer>
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
+      <v-btn icon>
+        <v-icon>mdi-heart</v-icon>
+      </v-btn>
+      <v-btn icon>
+        <v-icon>mdi-dots-vertical</v-icon>
+      </v-btn>
+    </v-toolbar>
+  </v-card>
   <v-card>
     <v-layout>
       <v-navigation-drawer
         v-model="drawer"
-        :rail="rail"
         permanent
-        @click="rail = false"
       >
-        <v-list-item
-          prepend-avatar="https://randomuser.me/api/portraits/men/85.jpg"
-          title="John Leider"
-          nav
-        >
-          <template v-slot:append>
-            <v-btn
-              variant="text"
-              icon="mdi-chevron-left"
-              @click.stop="rail = !rail"
-            ></v-btn>
-          </template>
-        </v-list-item>
-
-        <v-divider></v-divider>
-
         <v-list density="compact" nav>
-          <v-list-item prepend-icon="mdi-home-city" title="Home" value="home"></v-list-item>
-          <v-list-item prepend-icon="mdi-account" title="My Account" value="account"></v-list-item>
-          <v-list-item prepend-icon="mdi-account-group-outline" title="Users" value="users"></v-list-item>
+          <v-list-item href="http://localhost:8080/test" prepend-icon="mdi-home-city" title="home" value="home"></v-list-item>
+          <v-list-item href="http://localhost:8080/test2" prepend-icon="mdi-account" title="My Account" value="account"></v-list-item>
+          <v-list-item href="http://localhost:8080/test3" prepend-icon="mdi-account-group-outline" title="grid" value="grid"></v-list-item>
         </v-list>
       </v-navigation-drawer>
       <v-main style="height: 100vh">
@@ -37,6 +43,7 @@
 </template>
 
 <script>
+import VueGridLayout from 'vue-grid-layout';
 
 export default {
   name: 'App',
@@ -46,10 +53,14 @@ export default {
     items: [
       { title: 'Home', icon: 'mdi-home-city'},
       { title: 'My Account', icon: 'mdi-account'},
-      { title: 'Users', icon: 'mdi-account-group-outline'},
+      { title: 'grid', icon: 'mdi-account-group-outline'},
     ],
-    rail: true,
   }),
+
+  components: {
+    GridLayout: VueGridLayout.GridLayout,
+    GridItem: VueGridLayout.GridItem
+  },
 }
 </script>
 
