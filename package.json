@@ -9,10 +9,16 @@
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
+    "@popperjs/core": "^2.11.7",
     "core-js": "^3.8.3",
+    "node-polyfill-webpack-plugin": "^2.0.1",
     "roboto-fontface": "*",
+    "swiper": "^9.3.2",
+    "v-calendar": "^3.0.3",
     "vue": "^3.2.13",
+    "vue-grid-layout": "^2.4.0",
     "vue-router": "^4.0.13",
+    "vue3-grid-layout-next": "^1.0.5",
     "vuetify": "^3.2.2",
     "webfontloader": "^1.0.0"
   },

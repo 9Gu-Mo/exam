@@ -1,4 +1,5 @@
 <template>
+  <!-- header -->
   <v-card
     color="grey-lighten-4"
     flat
@@ -25,14 +26,15 @@
   </v-card>
   <v-card>
     <v-layout>
+      <!-- gnb -->
       <v-navigation-drawer
         v-model="drawer"
         permanent
       >
         <v-list density="compact" nav>
-          <v-list-item href="http://localhost:8080/test" prepend-icon="mdi-home-city" title="home" value="home"></v-list-item>
-          <v-list-item href="http://localhost:8080/test2" prepend-icon="mdi-account" title="My Account" value="account"></v-list-item>
-          <v-list-item href="http://localhost:8080/test3" prepend-icon="mdi-account-group-outline" title="grid" value="grid"></v-list-item>
+          <v-list-item href="http://localhost:8080/test" prepend-icon="mdi-home-city" title="grid" value="grid"></v-list-item>
+          <v-list-item href="http://localhost:8080/test2" prepend-icon="mdi-account" title="sub2" value="sub2"></v-list-item>
+          <v-list-item href="http://localhost:8080/test3" prepend-icon="mdi-account-group-outline" title="sub3" value="sub3"></v-list-item>
         </v-list>
       </v-navigation-drawer>
       <v-main style="height: 100vh">
@@ -43,23 +45,20 @@
 </template>
 
 <script>
-import VueGridLayout from 'vue-grid-layout';
-
 export default {
   name: 'App',
 
   data: () => ({
     drawer: true,
     items: [
-      { title: 'Home', icon: 'mdi-home-city'},
-      { title: 'My Account', icon: 'mdi-account'},
-      { title: 'grid', icon: 'mdi-account-group-outline'},
+      { title: 'grid', icon: 'mdi-home-city'},
+      { title: 'sub2', icon: 'mdi-account'},
+      { title: 'sub3', icon: 'mdi-account-group-outline'},
     ],
   }),
 
   components: {
-    GridLayout: VueGridLayout.GridLayout,
-    GridItem: VueGridLayout.GridItem
+    
   },
 }
 </script>
