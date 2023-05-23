@@ -12,6 +12,40 @@ a {
     }
 }
 
+.dim {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    .pop {
+        width: 500px;
+        height: 500px;
+        background: #fff;
+        border-radius: 8px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .pop_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #000;
+        }
+        .pop_con {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100% - 45px);
+        }
+    }
+}
+
 .v-main {
     position: relative;
     height: calc(100vh - 56px) !important;
@@ -76,6 +110,14 @@ a {
             }
             .calendar {
                 height: 100%;
+                .bot-section {
+                    border-radius: 15px;
+                    border: 1px solid #000;
+                    height: 150px;
+                    line-height: 150px;
+                    text-align: center;
+                    margin: 20px 10px 0;
+                }
             }
         }
     }
@@ -86,7 +128,7 @@ a {
             align-items: center;
             justify-content: space-between;
             li {
-                width: calc((100% - 30px) / 3);
+                width: calc((100% - 40px) / 3);
                 background-color: #fff;
                 border-radius: 15px;
                 border: 1px solid #000;

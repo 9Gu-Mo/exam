@@ -9,7 +9,10 @@
   >
     <v-toolbar density="compact">
       <a href="http://localhost:8080/" class="logo">
+        <!-- 절대 경로 -->
         <!-- <img :src="require('@/assets/images/top_logo_pc.png')"> -->
+        
+        <!-- 상대 경로 -->
         <img :src="require('./assets/images/top_logo_pc.png')">
       </a>
       <v-spacer></v-spacer>
