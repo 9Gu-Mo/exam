@@ -13,7 +13,7 @@
         <!-- <img :src="require('@/assets/images/top_logo_pc.png')"> -->
         
         <!-- 상대 경로 -->
-        <img :src="require('./assets/images/top_logo_pc.png')">
+        <img :src="require('./assets/images/top_logo_pc.png')" alt="로고">
       </a>
       <v-spacer></v-spacer>
       <v-btn icon>
@@ -41,6 +41,7 @@
         </v-list>
       </v-navigation-drawer>
       <v-main style="height: 100vh">
+        <!-- 라우터로 컴포넌트 연결한 컴포넌트를 불러옴 -->
         <router-view />
       </v-main>
     </v-layout>
@@ -65,6 +66,7 @@ export default {
   },
 }
 </script>
+
 
 <style lang="scss">
 @import "@/styles/variables.scss";

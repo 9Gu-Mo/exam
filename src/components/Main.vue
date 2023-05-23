@@ -25,10 +25,10 @@
             <div class="top_right">
                 <div class="calendar">
                     <!-- 컴포넌트 -->
-                    <Calendar title-position="left" ref="calendar" :min-date="new Date()" />
+                    <!-- <Calendar title-position="left" ref="calendar" :min-date="new Date()" /> -->
 
                     <!-- v-slot을 사용한 컴포넌트 -->
-                    <!-- <Calendar title-position="left" ref="calendar" :min-date="new Date()">
+                    <Calendar title-position="left" ref="calendar" :min-date="new Date()">
                         <template #footer>
                             <div class="w-full px-4 pb-3">
                                 <button class="text-white font-bold px-3 py-1 rounded-md btn-today" @click="moveToday">Today</button> 
@@ -37,17 +37,11 @@
                                 <p>해당 날짜 교육 및 컨설팅 신청</p>
                             </div>
                         </template>
-                    </Calendar> -->
+                    </Calendar>
                 </div>
             </div>
         </div>
         <div class="bot">
-            <!-- <ul>
-                <li>컨설팅1</li>
-                <li>컨설팅2</li>
-                <li>컨설팅3</li>
-            </ul> -->
-
             <!-- v-for로 이미지 출력 시 -->
             <ul>
                 <li v-for="(el, index) in products" :key="index">
@@ -98,16 +92,16 @@ export default {
             date: new Date(),
             products: [
                 {
-                    // img: ("@/assets/images/img1.png")
-                    img: require("@/assets/images/img1.png")
+                    img: ("@/assets/images/img1.png")
+                    // img: require("@/assets/images/img1.png")
                 },
                 {
-                    // img: ("@/assets/images/img2.png")
-                    img: require("@/assets/images/img2.png")
+                    img: ("@/assets/images/img2.png")
+                    // img: require("@/assets/images/img2.png")
                 },
                 {
-                    // img: ("@/assets/images/img3.png")
-                    img: require("@/assets/images/img3.png")
+                    img: ("@/assets/images/img3.png")
+                    // img: require("@/assets/images/img3.png")
                 },
             ]
         }
